@@ -4,8 +4,10 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
-    "start:dev": "nodemon src/server.js",
-    "start": "node src/server.js"
+    "dev": "nodemon -e js,ejs src/server.js",
+    "start": "node src/server.js",
+    "css:build": "postcss src/public/styles/tailwind.css -o src/public/styles/main.css",
+    "css:watch": "tailwindcss -i ./src/public/styles/tailwind.css -o ./src/public/styles/main.css --watch"
   },
   "keywords": [],
   "author": "Ahmad Zaaza",
@@ -15,6 +17,11 @@
     "express": "^4.17.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@tailwindcss/forms": "^0.4.0",
+    "autoprefixer": "^10.4.0",
+    "nodemon": "^2.0.15",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.7"
   }
 }

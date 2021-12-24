@@ -1,12 +1,28 @@
-<header class="main-header">
-  <nav class="main-header__nav">
-    <ul class="main-header__item-list">
-      <li class=" main-header__item">
-        <a class='<% path === '/' ? 'active' : '' %>' href="/">Home</a>
+<header class="bg-navColor p-4  border-b">
+  <nav class='max-w-2xl mx-auto'>
+    <ul class="flex">
+      <li class=" mx-2">
+        <a class='<%= path === '/' ? 'link-active' : '' %>' href="/">Home</a>
       </li>
       <li
-        class="main-header__item">
-        <a <% path === '/admin/add-product' ? 'active' : '' %> href="/admin/add-product">Add product</a>
+        class="mx-2">
+        <a class="<%= path === '/admin/products' ? 'link-active' : '' %>" href="/admin/products">Admin Products</a>
+      </li>
+      <li
+        class="mx-2">
+        <a class="<%= path === '/products' ? 'link-active' : '' %>" href="/products">Products</a>
+      </li>
+      <li
+        class="mx-2">
+        <a class="<%= path === '/admin/add-product' ? 'link-active' : '' %>" href="/admin/add-product">Add product</a>
+      </li>
+      <li
+        class="mx-2">
+        <a class="<%= path === '/cart' ? 'link-active' : '' %>" href="/cart">Cart</a>
+      </li>
+      <li
+        class="mx-2">
+        <a class="<%= path === '/checkout' ? 'link-active' : '' %>" href="/checkout">Checkout</a>
       </li>
     </ul>
   </nav>

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Website colors */
+    --primary-color: #1fb2c8;
+    --secondary-color: #d75449;
+    /* regular text colors */
+    --text-color: #252525;
+    --text-color-inverted: #fff;
+    --text-color-muted: #999999;
+    --bg-color: rgba(255, 251, 235);
+    --nav-color: 255, 255, 255;
+  }
+  html[class="dark"] {
+    /* Website colors */
+    --primary-color: #83c9ce;
+    --secondary-color: #e09794;
+    /* regular text colors */
+    --text-color: #fff;
+    --text-color-inverted: #252525;
+    --text-color-muted: #cdcdcd;
+    --bg-color: rgb(37, 37, 37);
+    --nav-color: 37, 37, 37;
+  }
+  html {
+    scroll-behavior: smooth !important;
+    transition: background-color 500ms ease;
+  }
+  body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-family: "Inter", sans-serif;
+  }
+
+
+  .form-control {
+    @apply mb-2;
+  }
+  .form-control label {
+    @apply block w-full mb-2
+  }
+  .form-control input, .form-control textarea {
+    @apply w-full
+  }
+
+}
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg bg-primary text-white shadow  w-full;
+  }
+  .card {
+    @apply px-4 py-2 rounded-lg shadow hover:shadow-xl transition-shadow duration-75;
+  }
+  .link-active {
+    @apply text-primary font-semibold;
+  }
+}
